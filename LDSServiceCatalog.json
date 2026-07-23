@@ -1,10 +1,10 @@
 {
-  "version": 1,
-  "versionDate": "2026-04",
+  "version": 2,
+  "versionDate": "2026-07",
   "worksets": [
     {
       "name": "UNISTRUT",
-      "worksetName": "MT_HANGER-UNISTRUT",
+      "worksetName": "LDS_HANGER-UNISTRUT",
       "priority": 1,
       "enabled": true,
       "createIfMissing": true,
@@ -17,7 +17,7 @@
     },
     {
       "name": "FAB HANGERS",
-      "worksetName": "MT_HANGERS",
+      "worksetName": "LDS_HANGERS",
       "priority": 2,
       "enabled": true,
       "createIfMissing": true,
@@ -25,7 +25,7 @@
     },
     {
       "name": "AIR TERMINALS",
-      "worksetName": "MT_TERMINALS",
+      "worksetName": "LDS_TERMINALS",
       "priority": 2,
       "enabled": true,
       "createIfMissing": true,
@@ -33,7 +33,7 @@
     },
     {
       "name": "Plumbing Fixtures",
-      "worksetName": "MT_PLUMBING-FIXTURES",
+      "worksetName": "LDS_PLUMBING-FIXTURES",
       "priority": 2,
       "enabled": true,
       "createIfMissing": true,
@@ -41,7 +41,7 @@
     },
     {
       "name": "Mechanical Equipment",
-      "worksetName": "MT_EQUIPMENT",
+      "worksetName": "LDS_EQUIPMENT",
       "priority": 3,
       "enabled": true,
       "createIfMissing": true,
@@ -49,7 +49,7 @@
     },
     {
       "name": "SLEEVES",
-      "worksetName": "MT_SLEEVES",
+      "worksetName": "LDS_SLEEVES",
       "priority": 4,
       "enabled": true,
       "createIfMissing": true,
@@ -57,7 +57,7 @@
     },
     {
       "name": "DAMAPERS",
-      "worksetName": "MT_FIRE-DAMPER",
+      "worksetName": "LDS_FIRE-DAMPER",
       "priority": 5,
       "enabled": true,
       "createIfMissing": true,
@@ -80,19 +80,1795 @@
       }
     },
     {
-      "materialName": "FABDUCT_EXHAUST FLUE",
-      "description": "FABDUCT_EXHAUST FLUE",
-      "worksetName": "MT_DUCT",
+      "materialName": "LDS-Chilled Water Condensate",
+      "description": "LDS-Chilled Water Condensate",
+      "worksetName": "LDS-PIPE",
       "color": {
-        "R": 76,
-        "G": 36,
+        "R": 0,
+        "G": 204,
+        "B": 204
+      },
+      "abbreviations": [
+        "COND",
+        "(F)COND"
+      ]
+    },
+    {
+      "materialName": "LDS-Chilled Water Return",
+      "description": "LDS-Chilled Water Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 51,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "CHWR",
+        "(F)CHWR"
+      ]
+    },
+    {
+      "materialName": "LDS-Chilled Water Supply",
+      "description": "LDS-Chilled Water Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 102,
+        "B": 204
+      },
+      "abbreviations": [
+        "CHWS",
+        "(F)CHWS"
+      ]
+    },
+    {
+      "materialName": "LDS-Condenser Water Return",
+      "description": "LDS-Condenser Water Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 102,
+        "G": 204,
         "B": 0
       },
       "abbreviations": [
-        "EXH-FLUE",
-        "(F)EXH-FLUE",
-        "BF",
-        "(F)BF"
+        "CWR",
+        "(F)CWR"
+      ]
+    },
+    {
+      "materialName": "LDS-Condenser Water Supply",
+      "description": "LDS-Condenser Water Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 51
+      },
+      "abbreviations": [
+        "CWS",
+        "(F)CWS"
+      ]
+    },
+    {
+      "materialName": "LDS-Heating Water Return",
+      "description": "LDS-Heating Water Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "HHWR",
+        "(F)HHWR"
+      ]
+    },
+    {
+      "materialName": "LDS-Heating Water Supply",
+      "description": "LDS-Heating Water Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 51,
+        "B": 0
+      },
+      "abbreviations": [
+        "HHWS",
+        "(F)HHWS"
+      ]
+    },
+    {
+      "materialName": "LDS-Refrigerant Return",
+      "description": "LDS-Refrigerant Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 153,
+        "B": 204
+      },
+      "abbreviations": [
+        "RFR",
+        "(F)RFR"
+      ]
+    },
+    {
+      "materialName": "LDS-Refrigerant Supply",
+      "description": "LDS-Refrigerant Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 102
+      },
+      "abbreviations": [
+        "RFS",
+        "(F)RFS"
+      ]
+    },
+    {
+      "materialName": "LDS-Refrigerant Relief",
+      "description": "LDS-Refrigerant Relief",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 153,
+        "B": 0
+      },
+      "abbreviations": [
+        "RRV",
+        "(F)RRV"
+      ]
+    },
+    {
+      "materialName": "LDS-Steam HP",
+      "description": "LDS-Steam HP",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 0
+      },
+      "abbreviations": [
+        "HPS",
+        "(F)HPS"
+      ]
+    },
+    {
+      "materialName": "LDS-Steam LP",
+      "description": "LDS-Steam LP",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "LPS",
+        "(F)LPS"
+      ]
+    },
+    {
+      "materialName": "LDS-Steam MP",
+      "description": "LDS-Steam MP",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 153
+      },
+      "abbreviations": [
+        "MPS",
+        "(F)MPS"
+      ]
+    },
+    {
+      "materialName": "LDS-Steam Clean",
+      "description": "LDS-Steam Clean",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 153
+      },
+      "abbreviations": [
+        "CS",
+        "(F)CS"
+      ]
+    },
+    {
+      "materialName": "LDS-Condensate HP",
+      "description": "LDS-Condensate HP",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 153,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "HPC",
+        "(F)HPC"
+      ]
+    },
+    {
+      "materialName": "LDS-Condensate MP",
+      "description": "LDS-Condensate MP",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 102,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "MPC",
+        "(F)MPC"
+      ]
+    },
+    {
+      "materialName": "LDS-Condensate LP",
+      "description": "LDS-Condensate LP",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 51,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "LPC",
+        "(F)LPC"
+      ]
+    },
+    {
+      "materialName": "LDS-Condensate Clean",
+      "description": "LDS-Condensate Clean",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 51
+      },
+      "abbreviations": [
+        "CSC",
+        "(F)CSC"
+      ]
+    },
+    {
+      "materialName": "LDS-Condensate Drain",
+      "description": "LDS-Condensate Drain",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 153
+      },
+      "abbreviations": [
+        "CD",
+        "(F)CD"
+      ]
+    },
+    {
+      "materialName": "LDS-Chemical Treatment",
+      "description": "LDS-Chemical Treatment",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "CT",
+        "(F)CT"
+      ]
+    },
+    {
+      "materialName": "LDS-Dual Temp Water Return",
+      "description": "LDS-Dual Temp Water Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 153,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "DTWR",
+        "(F)DTWR"
+      ]
+    },
+    {
+      "materialName": "LDS-Dual Temp Water Supply",
+      "description": "LDS-Dual Temp Water Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 153,
+        "B": 0
+      },
+      "abbreviations": [
+        "DTWS",
+        "(F)DTWS"
+      ]
+    },
+    {
+      "materialName": "LDS-Fuel Oil Fill",
+      "description": "LDS-Fuel Oil Fill",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "FOF",
+        "(F)FOF"
+      ]
+    },
+    {
+      "materialName": "LDS-Fuel Oil Supply",
+      "description": "LDS-Fuel Oil Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 153,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "FOS",
+        "(F)FOS"
+      ]
+    },
+    {
+      "materialName": "LDS-Fuel Oil Return",
+      "description": "LDS-Fuel Oil Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 204
+      },
+      "abbreviations": [
+        "FOR",
+        "(F)FOR"
+      ]
+    },
+    {
+      "materialName": "LDS-Fuel Oil Vent",
+      "description": "LDS-Fuel Oil Vent",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 102,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "FOV",
+        "(F)FOV"
+      ]
+    },
+    {
+      "materialName": "LDS-Fuel Oil Containment",
+      "description": "LDS-Fuel Oil Containment",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 51
+      },
+      "abbreviations": [
+        "FOC",
+        "(F)FOC"
+      ]
+    },
+    {
+      "materialName": "LDS-Gas Line (Low Pressure)",
+      "description": "LDS-Gas Line (Low Pressure)",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 153,
+        "B": 0
+      },
+      "abbreviations": [
+        "GL",
+        "(F)GL"
+      ]
+    },
+    {
+      "materialName": "LDS-Generator Exhaust",
+      "description": "LDS-Generator Exhaust",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 102,
+        "B": 204
+      },
+      "abbreviations": [
+        "GEXH",
+        "(F)GEXH"
+      ]
+    },
+    {
+      "materialName": "LDS-Fire Pump Exhaust",
+      "description": "LDS-Fire Pump Exhaust",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 51,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "FPEX",
+        "(F)FPEX"
+      ]
+    },
+    {
+      "materialName": "LDS-Glycol Chilled Water Supply",
+      "description": "LDS-Glycol Chilled Water Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "GCHWS",
+        "(F)GCHWS"
+      ]
+    },
+    {
+      "materialName": "LDS-Glycol Chilled Water Return",
+      "description": "LDS-Glycol Chilled Water Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 102,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "GCHWR",
+        "(F)GCHWR"
+      ]
+    },
+    {
+      "materialName": "LDS-Glycol Hot Water Supply",
+      "description": "LDS-Glycol Hot Water Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 51
+      },
+      "abbreviations": [
+        "GHWS",
+        "(F)GHWS"
+      ]
+    },
+    {
+      "materialName": "LDS-Glycol Hot Water Return",
+      "description": "LDS-Glycol Hot Water Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 153,
+        "B": 204
+      },
+      "abbreviations": [
+        "GWHR",
+        "(F)GWHR"
+      ]
+    },
+    {
+      "materialName": "LDS-Heat Recover Return",
+      "description": "LDS-Heat Recover Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 51
+      },
+      "abbreviations": [
+        "HRR",
+        "(F)HRR"
+      ]
+    },
+    {
+      "materialName": "LDS-Heat Recover Supply",
+      "description": "LDS-Heat Recover Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 153,
+        "B": 204
+      },
+      "abbreviations": [
+        "HRS",
+        "(F)HRS"
+      ]
+    },
+    {
+      "materialName": "LDS-Hot Water Return",
+      "description": "LDS-Hot Water Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "HWR",
+        "(F)HWR"
+      ]
+    },
+    {
+      "materialName": "LDS-Hot Water Supply",
+      "description": "LDS-Hot Water Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 51,
+        "B": 0
+      },
+      "abbreviations": [
+        "HWS",
+        "(F)HWS"
+      ]
+    },
+    {
+      "materialName": "LDS-High Temp Water Return",
+      "description": "LDS-High Temp Water Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "HTWR",
+        "(F)HTWR"
+      ]
+    },
+    {
+      "materialName": "LDS-High Temp Water Supply",
+      "description": "LDS-High Temp Water Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 51,
+        "B": 0
+      },
+      "abbreviations": [
+        "HTWS",
+        "(F)HTWS"
+      ]
+    },
+    {
+      "materialName": "LDS-Medium Temp Water Return",
+      "description": "LDS-Medium Temp Water Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "MTWR",
+        "(F)MTWR"
+      ]
+    },
+    {
+      "materialName": "LDS-Medium Temp Water Supply",
+      "description": "LDS-Medium Temp Water Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 51,
+        "B": 0
+      },
+      "abbreviations": [
+        "MTWS",
+        "(F)MTWS"
+      ]
+    },
+    {
+      "materialName": "LDS-Liquid Line HP",
+      "description": "LDS-Liquid Line HP",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "LLHP",
+        "(F)LLHP"
+      ]
+    },
+    {
+      "materialName": "LDS-Process Chilled Water Return",
+      "description": "LDS-Process Chilled Water Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 102,
+        "B": 204
+      },
+      "abbreviations": [
+        "PCHWR",
+        "(F)PCHWR"
+      ]
+    },
+    {
+      "materialName": "LDS-Process Chilled Water Supply",
+      "description": "LDS-Process Chilled Water Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 51,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "PCHWS",
+        "(F)PCHWS"
+      ]
+    },
+    {
+      "materialName": "LDS-Process Condenser Water Return",
+      "description": "LDS-Process Condenser Water Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 102,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "PCWR",
+        "(F)PCWR"
+      ]
+    },
+    {
+      "materialName": "LDS-Process Condenser Water Supply",
+      "description": "LDS-Process Condenser Water Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 51
+      },
+      "abbreviations": [
+        "PCWS",
+        "(F)PCWS"
+      ]
+    },
+    {
+      "materialName": "LDS-Process Hot Water Return",
+      "description": "LDS-Process Hot Water Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 51
+      },
+      "abbreviations": [
+        "PHWR",
+        "(F)PHWR"
+      ]
+    },
+    {
+      "materialName": "LDS-Process Hot Water Supply",
+      "description": "LDS-Process Hot Water Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 153,
+        "B": 204
+      },
+      "abbreviations": [
+        "PHWS",
+        "(F)PHWS"
+      ]
+    },
+    {
+      "materialName": "LDS-Process Piping",
+      "description": "LDS-Process Piping",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 51
+      },
+      "abbreviations": [
+        "PP",
+        "(F)PP"
+      ]
+    },
+    {
+      "materialName": "LDS-Pumped Condensate",
+      "description": "LDS-Pumped Condensate",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 0
+      },
+      "abbreviations": [
+        "PC",
+        "(F)PC"
+      ]
+    },
+    {
+      "materialName": "LDS-Quench Vent",
+      "description": "LDS-Quench Vent",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "QV",
+        "(F)QV"
+      ]
+    },
+    {
+      "materialName": "LDS-Secondary Chilled Water Return",
+      "description": "LDS-Secondary Chilled Water Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 51,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "SCHWR",
+        "(F)SCHWR"
+      ]
+    },
+    {
+      "materialName": "LDS-Secondary Chilled Water Supply",
+      "description": "LDS-Secondary Chilled Water Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 102,
+        "B": 204
+      },
+      "abbreviations": [
+        "SCHWS",
+        "(F)SCHWS"
+      ]
+    },
+    {
+      "materialName": "LDS-Secondary Hot Water Return",
+      "description": "LDS-Secondary Hot Water Return",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "HWR",
+        "(F)HWR"
+      ]
+    },
+    {
+      "materialName": "LDS-Secondary Hot Water Supply",
+      "description": "LDS-Secondary Hot Water Supply",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 51,
+        "B": 0
+      },
+      "abbreviations": [
+        "HWS",
+        "(F)HWS"
+      ]
+    },
+    {
+      "materialName": "LDS-Vent",
+      "description": "LDS-Vent",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 153,
+        "B": 0
+      },
+      "abbreviations": [
+        "V",
+        "(F)V"
+      ]
+    },
+    {
+      "materialName": "LDS-Boiler Blowdown",
+      "description": "LDS-Boiler Blowdown",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 0
+      },
+      "abbreviations": [
+        "BB",
+        "(F)BB"
+      ]
+    },
+    {
+      "materialName": "LDS-Boiler Feedwater",
+      "description": "LDS-Boiler Feedwater",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 51,
+        "B": 204
+      },
+      "abbreviations": [
+        "BFS",
+        "(F)BFS"
+      ]
+    },
+    {
+      "materialName": "LDS-Make Up Water",
+      "description": "LDS-Make Up Water",
+      "worksetName": "LDS-PIPE",
+      "color": {
+        "R": 0,
+        "G": 153,
+        "B": 204
+      },
+      "abbreviations": [
+        "MUW",
+        "(F)MUW"
+      ]
+    },
+    {
+      "materialName": "PLMG-Sanitary Waste",
+      "description": "PLMG-Sanitary Waste",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "SAN",
+        "(F)SAN"
+      ]
+    },
+    {
+      "materialName": "PLMG-Sanitary Vent",
+      "description": "PLMG-Sanitary Vent",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 153,
+        "B": 0
+      },
+      "abbreviations": [
+        "SANV",
+        "(F)SANV"
+      ]
+    },
+    {
+      "materialName": "PLMG-Sanitary Waste - CI",
+      "description": "PLMG-Sanitary Waste - CI",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "SAN",
+        "(F)SAN"
+      ]
+    },
+    {
+      "materialName": "PLMG-Sanitary Vent - CI",
+      "description": "PLMG-Sanitary Vent - CI",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 153,
+        "B": 0
+      },
+      "abbreviations": [
+        "SANV",
+        "(F)SANV"
+      ]
+    },
+    {
+      "materialName": "PLMG-Rain Water",
+      "description": "PLMG-Rain Water",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 204
+      },
+      "abbreviations": [
+        "RW",
+        "(F)RW"
+      ]
+    },
+    {
+      "materialName": "PLMG-Rain Water Vent",
+      "description": "PLMG-Rain Water Vent",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "RWV",
+        "(F)RWV"
+      ]
+    },
+    {
+      "materialName": "PLMG-Rain Water Overflow",
+      "description": "PLMG-Rain Water Overflow",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 204
+      },
+      "abbreviations": [
+        "RWO",
+        "(F)RWO"
+      ]
+    },
+    {
+      "materialName": "PLMG-Garage Waste",
+      "description": "PLMG-Garage Waste",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 51,
+        "B": 0
+      },
+      "abbreviations": [
+        "GW",
+        "(F)GW"
+      ]
+    },
+    {
+      "materialName": "PLMG-Garage Waste Vent",
+      "description": "PLMG-Garage Waste Vent",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 153,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "GWV",
+        "(F)GWV"
+      ]
+    },
+    {
+      "materialName": "PLMG-Kitchen Waste",
+      "description": "PLMG-Kitchen Waste",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 0
+      },
+      "abbreviations": [
+        "KW",
+        "(F)KW"
+      ]
+    },
+    {
+      "materialName": "PLMG-Kitchen Waste Vent",
+      "description": "PLMG-Kitchen Waste Vent",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 102,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "KWV",
+        "(F)KWV"
+      ]
+    },
+    {
+      "materialName": "PLMG-Laundry Waste",
+      "description": "PLMG-Laundry Waste",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 51,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "LW",
+        "(F)LW"
+      ]
+    },
+    {
+      "materialName": "PLMG-Laundry Waste Vent",
+      "description": "PLMG-Laundry Waste Vent",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 102
+      },
+      "abbreviations": [
+        "LWV",
+        "(F)LWV"
+      ]
+    },
+    {
+      "materialName": "PLMG-Suds Relief Vent",
+      "description": "PLMG-Suds Relief Vent",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 51,
+        "B": 204
+      },
+      "abbreviations": [
+        "SRV",
+        "(F)SRV"
+      ]
+    },
+    {
+      "materialName": "PLMG-Indirect Waste",
+      "description": "PLMG-Indirect Waste",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "IW",
+        "(F)IW"
+      ]
+    },
+    {
+      "materialName": "PLMG-Clear Water Waste",
+      "description": "PLMG-Clear Water Waste",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "CWW",
+        "(F)CWW"
+      ]
+    },
+    {
+      "materialName": "PLMG-Clear Water Waste Vent",
+      "description": "PLMG-Clear Water Waste Vent",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 102
+      },
+      "abbreviations": [
+        "CWWV",
+        "(F)CWWV"
+      ]
+    },
+    {
+      "materialName": "PLMG-Lab Waste",
+      "description": "PLMG-Lab Waste",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 51
+      },
+      "abbreviations": [
+        "LW",
+        "(F)LW"
+      ]
+    },
+    {
+      "materialName": "PLMG-Lab Waste Vent",
+      "description": "PLMG-Lab Waste Vent",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 153,
+        "B": 204
+      },
+      "abbreviations": [
+        "LWV",
+        "(F)LWV"
+      ]
+    },
+    {
+      "materialName": "PLMG-Subsoil Drainage",
+      "description": "PLMG-Subsoil Drainage",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "SSD",
+        "(F)SSD"
+      ]
+    },
+    {
+      "materialName": "PLMG-Radon",
+      "description": "PLMG-Radon",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 153,
+        "B": 204
+      },
+      "abbreviations": [
+        "RD",
+        "(F)RD"
+      ]
+    },
+    {
+      "materialName": "PLMG-Chamber Vent",
+      "description": "PLMG-Chamber Vent",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "CV (Service)",
+        "(F)CV (Service)"
+      ]
+    },
+    {
+      "materialName": "PLMG-Pumped Discharge",
+      "description": "PLMG-Pumped Discharge",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 102
+      },
+      "abbreviations": [
+        "PD (Service)",
+        "(F)PD (Service)"
+      ]
+    },
+    {
+      "materialName": "PLMG-Argon",
+      "description": "PLMG-Argon",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 51
+      },
+      "abbreviations": [
+        "AR",
+        "(F)AR"
+      ]
+    },
+    {
+      "materialName": "PLMG-Carbon Dioxide",
+      "description": "PLMG-Carbon Dioxide",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 102,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "CO2",
+        "(F)CO2"
+      ]
+    },
+    {
+      "materialName": "PLMG-Compressed Air",
+      "description": "PLMG-Compressed Air",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 204
+      },
+      "abbreviations": [
+        "CA",
+        "(F)CA"
+      ]
+    },
+    {
+      "materialName": "PLMG-Helium",
+      "description": "PLMG-Helium",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 51,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "HE",
+        "(F)HE"
+      ]
+    },
+    {
+      "materialName": "PLMG-Hydrogen",
+      "description": "PLMG-Hydrogen",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 153,
+        "B": 0
+      },
+      "abbreviations": [
+        "H2",
+        "(F)H2"
+      ]
+    },
+    {
+      "materialName": "PLMG-Instrument Air",
+      "description": "PLMG-Instrument Air",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 102,
+        "B": 204
+      },
+      "abbreviations": [
+        "IA",
+        "(F)IA"
+      ]
+    },
+    {
+      "materialName": "PLMG-Medical Air",
+      "description": "PLMG-Medical Air",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "MA",
+        "(F)MA"
+      ]
+    },
+    {
+      "materialName": "PLMG-Nitrogen",
+      "description": "PLMG-Nitrogen",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 51,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "N2",
+        "(F)N2"
+      ]
+    },
+    {
+      "materialName": "PLMG-Nitrous Oxide",
+      "description": "PLMG-Nitrous Oxide",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 153,
+        "B": 204
+      },
+      "abbreviations": [
+        "NO",
+        "(F)NO"
+      ]
+    },
+    {
+      "materialName": "PLMG-Oxygen",
+      "description": "PLMG-Oxygen",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 102
+      },
+      "abbreviations": [
+        "O2",
+        "(F)O2"
+      ]
+    },
+    {
+      "materialName": "PLMG-Vacuum (Labroratory)",
+      "description": "PLMG-Vacuum (Labroratory)",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "LVAC",
+        "(F)LVAC"
+      ]
+    },
+    {
+      "materialName": "PLMG-Vacuum (Medical)",
+      "description": "PLMG-Vacuum (Medical)",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "MVAC",
+        "(F)MVAC"
+      ]
+    },
+    {
+      "materialName": "PLMG-Waste Anesthetic Gas Disposal",
+      "description": "PLMG-Waste Anesthetic Gas Disposal",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 102
+      },
+      "abbreviations": [
+        "WAGD",
+        "(F)WAGD"
+      ]
+    },
+    {
+      "materialName": "PLMG-Natural Gas",
+      "description": "PLMG-Natural Gas",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 153,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "Gas",
+        "(F)Gas"
+      ]
+    },
+    {
+      "materialName": "PLMG-Natural Gas Vent",
+      "description": "PLMG-Natural Gas Vent",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 153
+      },
+      "abbreviations": [
+        "GasV",
+        "(F)GasV"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Cold Water",
+      "description": "PLMG-Domestic Cold Water",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "DCW",
+        "(F)DCW"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Hot Water",
+      "description": "PLMG-Domestic Hot Water",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 0
+      },
+      "abbreviations": [
+        "DHW",
+        "(F)DHW"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Hot Water Return",
+      "description": "PLMG-Domestic Hot Water Return",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "DHWR",
+        "(F)DHWR"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Cold Water Low Zone",
+      "description": "PLMG-Domestic Cold Water Low Zone",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "DCW-LZ",
+        "(F)DCW-LZ"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Cold Water High Zone",
+      "description": "PLMG-Domestic Cold Water High Zone",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "DCW-HZ",
+        "(F)DCW-HZ"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Hot Water Low Zone",
+      "description": "PLMG-Domestic Hot Water Low Zone",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 0
+      },
+      "abbreviations": [
+        "DHW-LZ",
+        "(F)DHW-LZ"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Hot Water High Zone",
+      "description": "PLMG-Domestic Hot Water High Zone",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 0
+      },
+      "abbreviations": [
+        "DHW-HZ",
+        "(F)DHW-HZ"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Hot Water Return Low Zone",
+      "description": "PLMG-Domestic Hot Water Return Low Zone",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "DHWR-LZ",
+        "(F)DHWR-LZ"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Hot Water Return High Zone",
+      "description": "PLMG-Domestic Hot Water Return High Zone",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "DHWR-HZ",
+        "(F)DHWR-HZ"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Hot Water 110",
+      "description": "PLMG-Domestic Hot Water 110",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 51,
+        "B": 0
+      },
+      "abbreviations": [
+        "DHW-110",
+        "(F)DHW-110"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Hot Water 120",
+      "description": "PLMG-Domestic Hot Water 120",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 51,
+        "B": 0
+      },
+      "abbreviations": [
+        "DHW-120",
+        "(F)DHW-120"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Hot Water 140",
+      "description": "PLMG-Domestic Hot Water 140",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 51,
+        "B": 0
+      },
+      "abbreviations": [
+        "DHW-140",
+        "(F)DHW-140"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Hot Water 160",
+      "description": "PLMG-Domestic Hot Water 160",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 51,
+        "B": 0
+      },
+      "abbreviations": [
+        "DHW-160",
+        "(F)DHW-160"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Hot Water 110 Return",
+      "description": "PLMG-Domestic Hot Water 110 Return",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "DHWR-110",
+        "(F)DHWR-110"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Hot Water 120 Return",
+      "description": "PLMG-Domestic Hot Water 120 Return",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "DHWR-120",
+        "(F)DHWR-120"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Hot Water 140 Return",
+      "description": "PLMG-Domestic Hot Water 140 Return",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "DHWR-140",
+        "(F)DHWR-140"
+      ]
+    },
+    {
+      "materialName": "PLMG-Domestic Hot Water 160 Return",
+      "description": "PLMG-Domestic Hot Water 160 Return",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "DHWR-160",
+        "(F)DHWR-160"
+      ]
+    },
+    {
+      "materialName": "PLMG-RODI Supply",
+      "description": "PLMG-RODI Supply",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 165,
+        "G": 0,
+        "B": 165
+      },
+      "abbreviations": [
+        "RODI",
+        "(F)RODI"
+      ]
+    },
+    {
+      "materialName": "PLMG-RODI Return",
+      "description": "PLMG-RODI Return",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 165,
+        "G": 0,
+        "B": 165
+      },
+      "abbreviations": [
+        "RODI-R",
+        "(F)RODI-R"
+      ]
+    },
+    {
+      "materialName": "PLMG-Gray Water",
+      "description": "PLMG-Gray Water",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 102,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "GW",
+        "(F)GW"
+      ]
+    },
+    {
+      "materialName": "PLMG-Irrigation Water",
+      "description": "PLMG-Irrigation Water",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 153,
+        "G": 204,
+        "B": 0
+      },
+      "abbreviations": [
+        "IRR",
+        "(F)IRR"
+      ]
+    },
+    {
+      "materialName": "PLMG-Non Potable Cold Water",
+      "description": "PLMG-Non Potable Cold Water",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 102,
+        "B": 204
+      },
+      "abbreviations": [
+        "NPCW",
+        "(F)NPCW"
+      ]
+    },
+    {
+      "materialName": "PLMG-Non Potable Hot Water",
+      "description": "PLMG-Non Potable Hot Water",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 0,
+        "B": 51
+      },
+      "abbreviations": [
+        "NPHW",
+        "(F)NPHW"
+      ]
+    },
+    {
+      "materialName": "PLMG-Non Potable Hot Water Return",
+      "description": "PLMG-Non Potable Hot Water Return",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "NPHWR",
+        "(F)NPHWR"
+      ]
+    },
+    {
+      "materialName": "PLMG-Non Potable Hot Water 140",
+      "description": "PLMG-Non Potable Hot Water 140",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 153,
+        "B": 0
+      },
+      "abbreviations": [
+        "NPHW-140",
+        "(F)NPHW-140"
+      ]
+    },
+    {
+      "materialName": "PLMG-Non Potable Hot Water 140 Return",
+      "description": "PLMG-Non Potable Hot Water 140 Return",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "NPHWR-140",
+        "(F)NPHWR-140"
+      ]
+    },
+    {
+      "materialName": "PLMG-Reclaim Water",
+      "description": "PLMG-Reclaim Water",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 0,
+        "G": 204,
+        "B": 102
+      },
+      "abbreviations": [
+        "RCW",
+        "(F)RCW"
+      ]
+    },
+    {
+      "materialName": "PLMG-Tempered Water",
+      "description": "PLMG-Tempered Water",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 153,
+        "B": 0
+      },
+      "abbreviations": [
+        "TW",
+        "(F)TW"
+      ]
+    },
+    {
+      "materialName": "PLMG-Tempered Water Return",
+      "description": "PLMG-Tempered Water Return",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 204,
+        "G": 102,
+        "B": 0
+      },
+      "abbreviations": [
+        "TWR",
+        "(F)TWR"
+      ]
+    },
+    {
+      "materialName": "PLMG-Trap Primer Water",
+      "description": "PLMG-Trap Primer Water",
+      "worksetName": "LDS-PLMG",
+      "color": {
+        "R": 51,
+        "G": 0,
+        "B": 204
+      },
+      "abbreviations": [
+        "TP",
+        "(F)TP"
       ]
     }
   ]
